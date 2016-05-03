@@ -8,3 +8,4 @@ D:\Study\OOP\Coursach\Translator\Translator\Translator\bin\Debug\Translator.pdb
 D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.exe
 D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.pdb
 D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.EnableAccessToInternet.resources
+D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.TranslatorWithInternet.resources

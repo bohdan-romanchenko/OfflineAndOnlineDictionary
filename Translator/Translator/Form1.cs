@@ -18,23 +18,6 @@ namespace Translator
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //if internet connection is aviable show MessageBox where user decides to give internet coonection
-            //for application, or not
-            if (CheckForInternetConnection())
-            {
-                if (showDialogFormTiAccessInternetConnection())
-                {
-                    label1.Text = "zbs";
-                }
-                else
-                {
-                    label1.Text = "ne ZBS";
-                }
-            }
-        }
-
         /// <summary>
         /// This function checking for internet connection on PC
         /// </summary>
@@ -60,6 +43,29 @@ namespace Translator
             // Display the form as a modal dialog box.
             form1.ShowDialog();
             return form1.DialogResult == DialogResult.OK;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //if internet connection is aviable show MessageBox where user decides to give internet coonection
+            //for application, or not
+            if (CheckForInternetConnection() && showDialogFormTiAccessInternetConnection())
+            {
+                    TranslatorWithInternet translatorWithInternet = new TranslatorWithInternet();
+                    translatorWithInternet.Show();
+            }
+            else
+            {
+                TranslatorWithoutInternet translatorWithoutInternet = new TranslatorWithoutInternet();
+                translatorWithoutInternet.Show();
+            }
+            
         }
 
     }

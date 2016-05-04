@@ -77,6 +77,9 @@
     <Compile Include="TranslatorWithoutInternet.Designer.cs">
       <DependentUpon>TranslatorWithoutInternet.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnableAccessToInternet.resx">
       <DependentUpon>EnableAccessToInternet.cs</DependentUpon>
     </EmbeddedResource>

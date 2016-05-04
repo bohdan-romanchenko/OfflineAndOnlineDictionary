@@ -22,8 +22,9 @@ namespace Translator
             string tmp = languageFrom.Text;
             languageFrom.Text = languageTo.Text;
             languageTo.Text = tmp;
-            textBoxResult.Text = "";
-            textBoxSentence.Text = "";
+            tmp = textBoxResult.Text;
+            textBoxResult.Text = textBoxSentence.Text;
+            textBoxSentence.Text = tmp;
         }
 
         private void languageFrom_SelectedIndexChanged(object sender, EventArgs e)

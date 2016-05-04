@@ -57,11 +57,13 @@ namespace Translator
             //for application, or not
             if (CheckForInternetConnection() && showDialogFormTiAccessInternetConnection())
             {
-                    TranslatorWithInternet translatorWithInternet = new TranslatorWithInternet();
-                    translatorWithInternet.Show();
+                //if everything is ok than use google translate api
+                TranslatorWithInternet translatorWithInternet = new TranslatorWithInternet();
+                translatorWithInternet.Show();
             }
             else
             {
+                //else use custom database with dictionary
                 TranslatorWithoutInternet translatorWithoutInternet = new TranslatorWithoutInternet();
                 translatorWithoutInternet.Show();
             }

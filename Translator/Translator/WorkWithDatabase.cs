@@ -13,7 +13,7 @@ namespace Translator
 
         public WorkWithDatabase()
         {
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Study\OOP\Coursach\Translator\Translator\Translator\dictionary.mdb;
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=dictionary.mdb;
                                                 Persist Security Info=False;";
         }
 

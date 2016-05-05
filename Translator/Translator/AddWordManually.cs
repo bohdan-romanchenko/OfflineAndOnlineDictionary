@@ -12,7 +12,6 @@ namespace Translator
 {
     public partial class AddWordManually : Form
     {
-        WorkWithDatabase workWithDatabase;
         public AddWordManually()
         {
             InitializeComponent();

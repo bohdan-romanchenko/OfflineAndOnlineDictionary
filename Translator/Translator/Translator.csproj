@@ -50,6 +50,11 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="dictionaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnableAccessToInternet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +82,7 @@
     <Compile Include="TranslatorWithoutInternet.Designer.cs">
       <DependentUpon>TranslatorWithoutInternet.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithDatabase.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,20 @@
     <EmbeddedResource Include="TranslatorWithInternet.resx">
       <DependentUpon>TranslatorWithInternet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TranslatorWithoutInternet.resx">
+      <DependentUpon>TranslatorWithoutInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dictionaryDataSet.xsc">
+      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dictionaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dictionaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dictionaryDataSet.xss">
+      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +130,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dictionary.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

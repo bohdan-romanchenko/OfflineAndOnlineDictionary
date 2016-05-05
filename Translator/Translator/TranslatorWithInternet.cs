@@ -71,6 +71,21 @@ namespace Translator
                 string langTo = editedLanguage(languageTo.Text);
                 textBoxResult.Text = GetTranslation.TranslateTextWithGoogle(
                     textBoxSentence.Text.Replace(".", " ").Trim(), langFrom + "|" + langTo);
+                WorkWithDatabase database = new WorkWithDatabase();
+                if (!database.dataExist(langFrom, textBoxSentence.Text) && !database.dataExist(langTo, textBoxResult.Text))
+                    database.insertData(langFrom, textBoxSentence.Text, langTo, textBoxResult.Text);
+                else if (!database.dataExist(langFrom, textBoxSentence.Text))
+                {
+                    int id = database.getIdByValue(langTo, textBoxResult.Text);
+                    database.updateData(langFrom, textBoxSentence.Text, id);
+                }
+                else if (!database.dataExist(langTo, textBoxResult.Text))
+                {
+                    int id = database.getIdByValue(langFrom, textBoxSentence.Text);
+                    database.updateData(langTo, textBoxResult.Text, id);
+                }
+                else
+                    MessageBox.Show("All data already exist");
             }
         }
     }

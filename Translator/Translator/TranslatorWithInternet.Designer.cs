@@ -77,8 +77,7 @@
             "Русский",
             "Français",
             "Deutsch",
-            "日本の",
-            "中国简体"});
+            "日本の"});
             this.languageTo.Location = new System.Drawing.Point(497, 22);
             this.languageTo.Name = "languageTo";
             this.languageTo.Size = new System.Drawing.Size(150, 21);
@@ -120,8 +119,7 @@
             "Русский",
             "Français",
             "Deutsch",
-            "日本の",
-            "中国简体"});
+            "日本の"});
             this.languageFrom.Location = new System.Drawing.Point(108, 22);
             this.languageFrom.Name = "languageFrom";
             this.languageFrom.Size = new System.Drawing.Size(150, 21);

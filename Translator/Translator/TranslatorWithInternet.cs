@@ -42,8 +42,6 @@ namespace Translator
                     return "uk";
                 case "Русский":
                     return "ru";
-                case "中国简体":
-                    return "zh-CN";
                 case "日本の":
                     return "ja";
                 case "Français":

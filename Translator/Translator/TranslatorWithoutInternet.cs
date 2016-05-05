@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Collections;
 
 namespace Translator
 {
@@ -38,8 +39,6 @@ namespace Translator
                     return "uk";
                 case "Русский":
                     return "ru";
-                case "中国简体":
-                    return "zh-CN";
                 case "日本の":
                     return "ja";
                 case "Français":
@@ -79,6 +78,30 @@ namespace Translator
                 else
                     textBoxResult.Text = "I'm sorry, but i can't translate this word :(";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddWordManually addWordManually = new AddWordManually();
+            addWordManually.Show();
+        }
+
+        private void languageFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxOfAviableWords.Items.Clear();
+            ArrayList allWordsByName = new ArrayList(workWithDatabase.getAllWordsByName(editedLanguage(languageFrom.Text)));
+            for (int i = 0; i < allWordsByName.Count; i++)
+            {
+                if (!allWordsByName[i].Equals(""))
+                {
+                    comboBoxOfAviableWords.Items.Add(allWordsByName[i]);
+                }
+            }
+        }
+
+        private void comboBoxOfAviableWords_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSentence.Text = comboBoxOfAviableWords.Text;
         }
     }
 }

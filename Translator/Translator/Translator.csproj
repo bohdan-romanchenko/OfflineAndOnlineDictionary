@@ -50,6 +50,12 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddWordManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWordManually.Designer.cs">
+      <DependentUpon>AddWordManually.cs</DependentUpon>
+    </Compile>
     <Compile Include="dictionaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +91,9 @@
     <Compile Include="WorkWithDatabase.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWordManually.resx">
+      <DependentUpon>AddWordManually.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnableAccessToInternet.resx">
       <DependentUpon>EnableAccessToInternet.cs</DependentUpon>

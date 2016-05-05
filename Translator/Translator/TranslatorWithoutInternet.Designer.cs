@@ -42,6 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxSentence = new System.Windows.Forms.TextBox();
             this.languageFrom = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxOfAviableWords = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // oleDbDataAdapter1
@@ -53,11 +56,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 142);
+            this.label1.Location = new System.Drawing.Point(10, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Connection status";
             // 
             // buttonReplaceLanguages
             // 
@@ -98,8 +101,7 @@
             "Русский",
             "Français",
             "Deutsch",
-            "日本の",
-            "中国简体"});
+            "日本の"});
             this.languageTo.Location = new System.Drawing.Point(497, 16);
             this.languageTo.Name = "languageTo";
             this.languageTo.Size = new System.Drawing.Size(150, 21);
@@ -141,18 +143,49 @@
             "Русский",
             "Français",
             "Deutsch",
-            "日本の",
-            "中国简体"});
+            "日本の"});
             this.languageFrom.Location = new System.Drawing.Point(108, 16);
             this.languageFrom.Name = "languageFrom";
             this.languageFrom.Size = new System.Drawing.Size(150, 21);
             this.languageFrom.TabIndex = 17;
+            this.languageFrom.SelectedIndexChanged += new System.EventHandler(this.languageFrom_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(547, 160);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Add word manually";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxOfAviableWords
+            // 
+            this.comboBoxOfAviableWords.FormattingEnabled = true;
+            this.comboBoxOfAviableWords.Location = new System.Drawing.Point(301, 162);
+            this.comboBoxOfAviableWords.Name = "comboBoxOfAviableWords";
+            this.comboBoxOfAviableWords.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxOfAviableWords.TabIndex = 26;
+            this.comboBoxOfAviableWords.SelectedIndexChanged += new System.EventHandler(this.comboBoxOfAviableWords_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(213, 165);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Aviable words : ";
             // 
             // TranslatorWithoutInternet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 163);
+            this.ClientSize = new System.Drawing.Size(663, 192);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxOfAviableWords);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonReplaceLanguages);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonTranslate);
@@ -186,5 +219,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSentence;
         private System.Windows.Forms.ComboBox languageFrom;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxOfAviableWords;
+        private System.Windows.Forms.Label label4;
     }
 }

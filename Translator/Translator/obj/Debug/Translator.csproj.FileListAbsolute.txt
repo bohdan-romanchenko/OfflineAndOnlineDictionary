@@ -12,3 +12,4 @@ D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.Tran
 D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.About.resources
 D:\Study\OOP\Coursach\Translator\Translator\Translator\bin\Debug\dictionary.mdb
 D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.TranslatorWithoutInternet.resources
+D:\Study\OOP\Coursach\Translator\Translator\Translator\obj\Debug\Translator.AddWordManually.resources

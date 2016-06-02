@@ -86,5 +86,10 @@ namespace Translator
                     MessageBox.Show("All data already exist");
             }
         }
+
+        private void TranslatorWithInternet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

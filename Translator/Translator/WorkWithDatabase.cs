@@ -24,11 +24,14 @@ namespace Translator
             {
                 connection.Open();
                 returnValue = true;
-                connection.Close();
             }
             catch(Exception ex)
             {
                 returnValue = false;
+            }
+            finally
+            {
+                connection.Close();
             }
             return returnValue;
         }
@@ -46,7 +49,7 @@ namespace Translator
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "select * from dict where " + language + "='" + word+ "'";
+                string query = "select * from dict where " + language + "='" + word.Replace("\'", "\u005C\u0027") + "'";
                 command.CommandText = query;
 
                 OleDbDataReader reader = command.ExecuteReader();
@@ -55,11 +58,14 @@ namespace Translator
                     //returnValue = Int32.Parse(reader[0].ToString());
                     returnValue = Int32.Parse(reader["id"].ToString());
                 }
-                connection.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+            finally 
+            {
+                connection.Close();
             }
             return returnValue;
         }
@@ -80,12 +86,16 @@ namespace Translator
                 {
                     returnString = reader[language].ToString();
                 }
-                connection.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
+            finally
+            {
+                connection.Close();
+            }
+
             return returnString;
         }
 
@@ -106,11 +116,14 @@ namespace Translator
                 {
                     returnList.Add(reader[0].ToString());
                 }
-                connection.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+            finally
+            {
+                connection.Close();
             }
             returnList.Sort();
             return returnList;
@@ -129,17 +142,20 @@ namespace Translator
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 //not shure about value or values and breckets
-                command.CommandText = "insert into dict (" + languageFrom + "," + languageTo + ") values('" + wordFrom + "','" + wordTo + "')";
+                Console.WriteLine(wordFrom + " | " + wordFrom.Replace("\'", "\u005C\u0027"));
+                command.CommandText = "insert into dict (" + languageFrom + "," + languageTo + ") values ('" + wordFrom.Replace("\'", "\u005C\u0027") + "','" + wordTo.Replace("\'", "\u005C\u0027") + "')";
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
+            finally
+            {
+                connection.Close();
+            }
         }
 
-        //not tested function yet
         public void updateData(string language, string word, long id)
         {
             try
@@ -147,14 +163,17 @@ namespace Translator
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update dict set " + language + "='" + word + "' where id=" + id;
+                string query = "update dict set " + language + "='" + word.Replace("\'", "\u005C\u0027") + "' where id=" + id;
                 command.CommandText = query;
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 

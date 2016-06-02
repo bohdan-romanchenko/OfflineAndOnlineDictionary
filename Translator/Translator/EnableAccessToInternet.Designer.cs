@@ -74,6 +74,7 @@
             this.Controls.Add(this.button1);
             this.Name = "EnableAccessToInternet";
             this.Text = "EnableAccessToInternet";
+            this.Load += new System.EventHandler(this.EnableAccessToInternet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

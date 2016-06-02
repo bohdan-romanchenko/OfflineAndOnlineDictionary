@@ -56,10 +56,10 @@
     <Compile Include="AddWordManually.Designer.cs">
       <DependentUpon>AddWordManually.cs</DependentUpon>
     </Compile>
-    <Compile Include="dictionaryDataSet.Designer.cs">
+    <Compile Include="dictionaryDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+      <DependentUpon>dictionaryDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="EnableAccessToInternet.cs">
       <SubType>Form</SubType>
@@ -116,16 +116,16 @@
     <EmbeddedResource Include="TranslatorWithoutInternet.resx">
       <DependentUpon>TranslatorWithoutInternet.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dictionaryDataSet.xsc">
-      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+    <None Include="dictionaryDataSet1.xsc">
+      <DependentUpon>dictionaryDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="dictionaryDataSet.xsd">
+    <None Include="dictionaryDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dictionaryDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>dictionaryDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dictionaryDataSet.xss">
-      <DependentUpon>dictionaryDataSet.xsd</DependentUpon>
+    <None Include="dictionaryDataSet1.xss">
+      <DependentUpon>dictionaryDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,9 +141,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dictionary.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="dictionary.mdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

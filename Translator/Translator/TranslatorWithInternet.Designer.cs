@@ -141,6 +141,7 @@
             this.Controls.Add(this.languageFrom);
             this.Name = "TranslatorWithInternet";
             this.Text = "TranslatorWithInternet";
+            this.Load += new System.EventHandler(this.TranslatorWithInternet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

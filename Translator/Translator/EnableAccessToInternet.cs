@@ -19,5 +19,10 @@ namespace Translator
             Controls.Add(button1);
             Controls.Add(button2);
         }
+
+        private void EnableAccessToInternet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

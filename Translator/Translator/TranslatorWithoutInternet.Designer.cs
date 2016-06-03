@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TranslatorWithoutInternet));
             this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
@@ -58,9 +59,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Connection status";
+            this.label1.Text = "Статус з\'єднання";
             // 
             // buttonReplaceLanguages
             // 
@@ -88,7 +89,7 @@
             this.buttonTranslate.Name = "buttonTranslate";
             this.buttonTranslate.Size = new System.Drawing.Size(103, 59);
             this.buttonTranslate.TabIndex = 22;
-            this.buttonTranslate.Text = "TRANSLATE ->";
+            this.buttonTranslate.Text = "ПЕРЕКЛАСТИ ->";
             this.buttonTranslate.UseVisualStyleBackColor = true;
             this.buttonTranslate.Click += new System.EventHandler(this.buttonTranslate_Click);
             // 
@@ -112,18 +113,18 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(384, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Language Translation";
+            this.label3.Text = "Мова перекладу";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Original Language";
+            this.label2.Text = "Мова оригіналу";
             // 
             // textBoxSentence
             // 
@@ -152,11 +153,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(547, 160);
+            this.button1.Location = new System.Drawing.Point(492, 162);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.Size = new System.Drawing.Size(159, 23);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Add word manually";
+            this.button1.Text = "Додати слово до словника";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -172,11 +173,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 165);
+            this.label4.Location = new System.Drawing.Point(120, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(175, 13);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Aviable words : ";
+            this.label4.Text = "Доступні слова по обраній мові : ";
             // 
             // TranslatorWithoutInternet
             // 
@@ -195,8 +196,9 @@
             this.Controls.Add(this.textBoxSentence);
             this.Controls.Add(this.languageFrom);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TranslatorWithoutInternet";
-            this.Text = "TranslatorWithoutInternet";
+            this.Text = "Словник";
             this.Load += new System.EventHandler(this.TranslatorWithoutInternet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

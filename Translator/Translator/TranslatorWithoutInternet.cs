@@ -24,9 +24,9 @@ namespace Translator
         private void TranslatorWithoutInternet_Load(object sender, EventArgs e)
         {             
             if(workWithDatabase.isConnection())
-                label1.Text = "Connected to database.";
+                label1.Text = "З'єднано з базою.";
             else
-                label1.Text = "Failed to connect";
+                label1.Text = "Не вдалося з'єднатися з базою.";
         }
 
         private string editedLanguage(string stringToCheck)
@@ -64,11 +64,11 @@ namespace Translator
         {
             if (textBoxSentence.Text.Equals(""))
             {
-                MessageBox.Show("Error while translating! Inputted empty string.");
+                MessageBox.Show("Помилка перекладу! Ви не ввели слово.");
             }
             else if (languageFrom.Text.Equals("") || languageTo.Text.Equals(""))
             {
-                MessageBox.Show("Error while translating! Language wasn't choosen");
+                MessageBox.Show("Помилка перекладу! Ви не обрали мову");
             }
             else
             {
@@ -76,7 +76,7 @@ namespace Translator
                 if (!resultOfTranslating.Equals(""))
                     textBoxResult.Text = resultOfTranslating;
                 else
-                    textBoxResult.Text = "I'm sorry, but i can't translate this word :(";
+                    textBoxResult.Text = "Я ще не знаю такого слова :(";
             }
         }
 

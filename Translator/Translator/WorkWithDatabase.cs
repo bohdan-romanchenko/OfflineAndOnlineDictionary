@@ -16,7 +16,10 @@ namespace Translator
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=dictionary.mdb;
                                                 Persist Security Info=False;";
         }
-
+        /// <summary>
+        /// Checking if is connection
+        /// </summary>
+        /// <returns>enable connection</returns>
         public bool isConnection()
         {
             bool returnValue;
@@ -35,7 +38,6 @@ namespace Translator
             }
             return returnValue;
         }
-
         public string getTranslation(string languageFrom, string word,string languageTo)
         {
             return getValueByID(languageTo, getIdByValue(languageFrom, word));

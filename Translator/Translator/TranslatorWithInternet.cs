@@ -57,11 +57,11 @@ namespace Translator
         {
             if (textBoxSentence.Text.Equals(""))
             {
-                MessageBox.Show("Error while translating! Inputted empty string.");
+                MessageBox.Show("Помилка перекладу! Ви не ввели слово.");
             }
             else if (languageFrom.Text.Equals("") || languageTo.Text.Equals(""))
             {
-                MessageBox.Show("Error while translating! Language wasn't choosen");
+                MessageBox.Show("Помилка перекладу! Ви не обрали мову");
             }
             else
             {
@@ -83,7 +83,7 @@ namespace Translator
                     database.updateData(langTo, textBoxResult.Text, id);
                 }
                 else
-                    MessageBox.Show("All data already exist");
+                    MessageBox.Show("Ці слова вже є в словнику");
             }
         }
 

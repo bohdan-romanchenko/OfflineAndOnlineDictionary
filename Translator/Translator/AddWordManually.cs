@@ -62,8 +62,8 @@ namespace Translator
                 database.updateData(langTo, textBoxResult.Text, id);
             }
             else
-                MessageBox.Show("All data already exist");
-            MessageBox.Show("Dictionary updated");
+                MessageBox.Show("Ці слова вже є в словнику");
+            MessageBox.Show("Словник оновлено");
         }
     }
 }

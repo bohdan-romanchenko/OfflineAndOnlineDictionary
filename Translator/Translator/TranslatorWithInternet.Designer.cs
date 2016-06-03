@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TranslatorWithInternet));
             this.buttonReplaceLanguages = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.buttonTranslate = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             this.buttonTranslate.Name = "buttonTranslate";
             this.buttonTranslate.Size = new System.Drawing.Size(103, 59);
             this.buttonTranslate.TabIndex = 14;
-            this.buttonTranslate.Text = "TRANSLATE ->";
+            this.buttonTranslate.Text = "ПЕРЕКЛАСТИ ->";
             this.buttonTranslate.UseVisualStyleBackColor = true;
             this.buttonTranslate.Click += new System.EventHandler(this.buttonTranslate_Click);
             // 
@@ -86,20 +87,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(384, 25);
+            this.label3.Location = new System.Drawing.Point(401, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Language Translation";
+            this.label3.Text = "Мова перекладу";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Original Language";
+            this.label2.Text = "Мова оригіналу";
             // 
             // textBoxSentence
             // 
@@ -139,8 +140,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxSentence);
             this.Controls.Add(this.languageFrom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TranslatorWithInternet";
-            this.Text = "TranslatorWithInternet";
+            this.Text = "Перекладач";
             this.Load += new System.EventHandler(this.TranslatorWithInternet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

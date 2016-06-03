@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWordManually));
             this.languageTo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,18 +58,18 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(296, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Language Translation";
+            this.label3.Text = "Мова перекладу";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(5, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Original Language";
+            this.label2.Text = "Мова оригіналу";
             // 
             // languageFrom
             // 
@@ -109,7 +110,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 45);
             this.button1.TabIndex = 31;
-            this.button1.Text = "Save";
+            this.button1.Text = "Зберегти";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -125,8 +126,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.languageFrom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddWordManually";
-            this.Text = "AddWordManually";
+            this.Text = "Додати слово";
             this.Load += new System.EventHandler(this.AddWordManually_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

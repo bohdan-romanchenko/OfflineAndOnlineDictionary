@@ -116,6 +116,7 @@
     <EmbeddedResource Include="TranslatorWithoutInternet.resx">
       <DependentUpon>TranslatorWithoutInternet.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="dictionaryDataSet1.xsc">
       <DependentUpon>dictionaryDataSet1.xsd</DependentUpon>
     </None>
